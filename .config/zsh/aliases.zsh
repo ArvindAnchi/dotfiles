@@ -17,6 +17,9 @@ alias gp='git push'
 alias gpf='git push --force-with-lease'
 
 alias gst='git status -s'
+alias gstl='git stash list'
+alias gsta='git stash push'
+alias gstp='git stash pop'
 alias gbr='git branch --remote'
 alias gd='git diff'
 

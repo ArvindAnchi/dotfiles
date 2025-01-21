@@ -30,8 +30,8 @@ return {
 		capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 		local servers = {
-			gopls = {},
-			ts_ls = {},
+			gopls  = {},
+			ts_ls  = {},
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -51,7 +51,12 @@ return {
 			},
 		}
 
-		require('mason').setup()
+		require('mason').setup {
+			registries = {
+				'github:mason-org/mason-registry',
+				'github:crashdummyy/mason-registry',
+			},
+		}
 
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
@@ -60,6 +65,7 @@ return {
 
 		require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+		---@diagnostic disable [missing-fields]
 		require('mason-lspconfig').setup {
 			handlers = {
 				function(server_name)
