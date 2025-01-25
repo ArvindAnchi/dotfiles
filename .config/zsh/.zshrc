@@ -23,5 +23,14 @@ source $ZDOTDIR/plugins/completion.zsh
 
 source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/aliases.zsh
+source $ZDOTDIR/conda.zsh
+source $ZDOTDIR/pnpm.zsh
 
 eval "$(dircolors -b $ZDOTDIR/dircolors.zsh)"
+
+# fnm
+FNM_PATH="/home/arvindanchi/.config/local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/arvindanchi/.config/local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
