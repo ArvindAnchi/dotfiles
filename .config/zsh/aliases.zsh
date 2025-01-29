@@ -7,11 +7,14 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
+alias history='fc -li 100'
+
 alias grep="grep -P -i --color=auto"
 
 alias vim='nvim'
 alias vi='nvim'
 
+alias gf='git fetch'
 alias gl='git pull'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
@@ -22,6 +25,7 @@ alias gsta='git stash push'
 alias gstp='git stash pop'
 alias gbr='git branch --remote'
 alias gd='git diff'
+alias gsh='git show'
 
 alias glo='git log --oneline --decorate'
 alias gloga='git log --oneline --decorate --graph --all'
