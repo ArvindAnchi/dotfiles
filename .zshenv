@@ -8,9 +8,12 @@ export VISUAL="nvim"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export MANPAGER='nvim +Man!'
+
 export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-export MANPAGER='nvim +Man!'
-export PATH="$PATH:/opt/nvim-linux64/bin"
+typeset -U path PATH
+path=(/opt/nvim-linux64/bin /usr/local/go/bin $path)
+export PATH
