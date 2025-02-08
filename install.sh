@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp ~/dotfiles-minimal/.zshenv ~/.zshenv
-cp ~/dotfiles-minimal/.tmux.conf ~/.tmux.conf
+cp ~/dotfiles/.zshenv ~/.zshenv
 
-cp -r ~/dotfiles-minimal/.config/* ~/.config
+cp -r ~/dotfiles/.config/* ~/.config

@@ -1,15 +1,19 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
+export XDG_RUNTIME_DIR="$HOME/.cache"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export MANPAGER='nvim +Man!'
+
 export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-export MANPAGER='nvim +Man!'
-export PATH="$PATH:/opt/nvim-linux64/bin"
+typeset -U path PATH
+path=(/opt/nvim-linux64/bin /usr/local/go/bin $path)
+export PATH

@@ -5,6 +5,10 @@ setopt PUSHD_SILENT              # Do not print the directory stack after pushd 
 setopt CORRECT                   # Spelling correction
 setopt CDABLE_VARS               # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB             # Use extended globbing syntax.
+setopt LONGLISTJOBS              # Display PID when suspending processes as well
+setopt NOTIFY                    # Report the status of backgrounds jobs immediately
+setopt HASH_LIST_ALL             # Whenever a command completion is attempted, make sure the entire command path is hashed first.
+setopt COMPLETEINWORD            # Not just at the end
 
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
 setopt SHARE_HISTORY             # Share history between all sessions.
@@ -16,6 +20,9 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
+REPORTTIME=5
+bindkey -e
+
 fpath=($ZDOTDIR/plugins $fpath)
 
 source $ZDOTDIR/plugins/zsh-history-substring-search.zsh
@@ -25,12 +32,6 @@ source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/conda.zsh
 source $ZDOTDIR/pnpm.zsh
+source $ZDOTDIR/fnm.zsh
 
 eval "$(dircolors -b $ZDOTDIR/dircolors.zsh)"
-
-# fnm
-FNM_PATH="/home/arvindanchi/.config/local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/arvindanchi/.config/local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
