@@ -22,6 +22,7 @@ alias gpf='git push --force-with-lease'
 
 alias gstl='git stash list'
 alias gsta='git stash push'
+alias gstas='git stash -- $(git diff --staged --name-only)'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 
