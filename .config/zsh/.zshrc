@@ -30,7 +30,6 @@ source $ZDOTDIR/plugins/completion.zsh
 
 source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/aliases.zsh
-source $ZDOTDIR/conda.zsh
 source $ZDOTDIR/pnpm.zsh
 source $ZDOTDIR/fnm.zsh
 
