@@ -16,6 +16,7 @@ alias gst='git status -s'
 
 alias gf='git fetch'
 alias grb='git rebase'
+alias gcp='git cherry-pick'
 alias gl='git pull'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
