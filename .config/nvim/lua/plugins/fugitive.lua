@@ -1,7 +1,7 @@
 return {
-	'tpope/vim-fugitive',
-	lazy = false,
-	keys = {
-		{ '<leader>g', function() vim.cmd('vert Git') end, desc = 'git fugitive' },
-	}
+    'tpope/vim-fugitive',
+    lazy = false,
+    keys = {
+        { '<leader>g', function() vim.cmd('Git | resize 40') end, desc = 'git fugitive' },
+    }
 }
