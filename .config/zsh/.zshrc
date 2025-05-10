@@ -22,6 +22,7 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 
 REPORTTIME=5
 bindkey -e
+bindkey -s  "~/.local/scripts/tmux-sessionizer\n"
 
 fpath=($ZDOTDIR/plugins $fpath)
 
