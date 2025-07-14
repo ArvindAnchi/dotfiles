@@ -4,7 +4,8 @@ return {
     ---@type oil.SetupOpts
     opts = {
         keymaps = {
-            ["<C-c>"] = "actions.refresh"
+            ["<C-c>"] = "actions.refresh",
+            ["<C-p>"] = require('telescope.builtin').git_files,
         },
         view_options = {
             show_hidden = true,
