@@ -10,7 +10,7 @@ alias history='fc -li 100'
 alias grep="grep -P -i --color=auto"
 
 alias vim='nvim'
-alias vi='nvim'
+alias vi='nvim -u NONE'
 
 alias gf='git fetch'
 alias grb='git rebase'
