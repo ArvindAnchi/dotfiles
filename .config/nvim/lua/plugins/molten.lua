@@ -84,6 +84,7 @@ return {
     {
         "GCBallesteros/jupytext.nvim",
         ft = { "ipynb" },
+        lazy = false,
         opts = {
             style = "markdown",
             output_extension = "md",
