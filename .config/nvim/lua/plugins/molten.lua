@@ -40,7 +40,7 @@ return {
                     vim.keymap.set("n", "<localleader>rA", r.run_all, { desc = "run all cells", silent = true })
 
                     -- setup some molten specific keybindings
-                    vim.keymap.set("n", "<localleader>e", ":MoltenEvaluateOperator<CR>",
+                    vim.keymap.set("n", "<localleader>eo", ":MoltenEvaluateOperator<CR>",
                         { desc = "evaluate operator", silent = true })
                     vim.keymap.set("v", "<localleader>r", ":<C-u>MoltenEvaluateVisual<CR>gv",
                         { desc = "execute visual selection", silent = true })
