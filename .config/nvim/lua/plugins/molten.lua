@@ -9,15 +9,16 @@ return {
 
             vim.g.molten_auto_open_output = false
             vim.g.molten_image_location = "float"
-            vim.g.molten_image_provider = "image.nvim"
+            vim.g.molten_image_provider = "none"
             vim.g.molten_output_win_border = { "", "━", "", "" }
-            vim.g.molten_output_win_max_height = 12
+            vim.g.molten_output_win_max_height = 20
+            vim.g.molten_virt_text_max_lines = 500
             vim.g.molten_enter_output_behavior = "open_and_enter"
             vim.g.molten_virt_text_output = true
             vim.g.molten_use_border_highlights = true
             vim.g.molten_virt_lines_off_by_1 = true
             vim.g.molten_wrap_output = true
-            vim.g.molten_tick_rate = 142
+            vim.g.molten_tick_rate = 500
         end,
         config = function()
             vim.keymap.set({ "v", "n" }, "<leader><leader>R", "<Cmd>MoltenEvaluateVisual<CR>")
@@ -40,8 +41,6 @@ return {
                     vim.keymap.set("n", "<localleader>rA", r.run_all, { desc = "run all cells", silent = true })
 
                     -- setup some molten specific keybindings
-                    vim.keymap.set("n", "<localleader>eo", ":MoltenEvaluateOperator<CR>",
-                        { desc = "evaluate operator", silent = true })
                     vim.keymap.set("v", "<localleader>r", ":<C-u>MoltenEvaluateVisual<CR>gv",
                         { desc = "execute visual selection", silent = true })
                     vim.keymap.set("n", "<localleader>os", ":noautocmd MoltenEnterOutput<CR>",
