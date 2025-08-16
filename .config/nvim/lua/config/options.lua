@@ -10,6 +10,7 @@ vim.opt.showmode = false
 vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.wrap = false
+vim.opt.winborder = 'rounded'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
