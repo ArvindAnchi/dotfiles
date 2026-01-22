@@ -14,6 +14,10 @@ export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+export DOTNET_ROOT=/home/arvind/dotnet
+export PATH=$PATH:$DOTNET_ROOT:~/.dotnet/tools
+
 typeset -U path PATH
 path=(/opt/nvim-linux64/bin /usr/local/go/bin $path)
+
 export PATH
