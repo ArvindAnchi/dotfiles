@@ -12,6 +12,8 @@ alias grep="grep -P -i --color=auto"
 alias vim='nvim'
 alias vi='nvim -u NONE'
 
+alias download='aria2c -c -s 16 -x 16 -k 1M -j 20'
+
 alias gf='git fetch'
 alias grb='git rebase'
 alias gcp='git cherry-pick'
