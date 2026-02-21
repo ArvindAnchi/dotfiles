@@ -11,6 +11,7 @@ vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.wrap = false
 vim.opt.winborder = 'rounded'
+vim.opt.colorcolumn = 80
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
