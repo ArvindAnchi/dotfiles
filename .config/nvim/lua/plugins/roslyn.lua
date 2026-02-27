@@ -1,7 +1,7 @@
 return {
     {
         'seblj/roslyn.nvim',
-        ft = { 'cs', 'razor' },
+        ft = { 'cs', 'razor', 'cshtml' },
         ---@module 'roslyn.config'
         ---@type RoslynNvimConfig
         opts = {
