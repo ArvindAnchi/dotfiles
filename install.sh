@@ -7,7 +7,7 @@ rm -rf ~/.config/pip/
 rm -rf ~/.config/tmux/
 rm -rf ~/.config/zsh/
 
-cp ~/dotfiles/.zshenv ~/.zshenv
+cp ./.zshenv ~/.zshenv
 
-cp -r ~/dotfiles/.config/* ~/.config
-cp -r ~/dotfiles/.local/* ~/.local
+cp -r ./.config/* ~/.config
+cp -r ./.local/* ~/.local
