@@ -3,6 +3,11 @@ return {
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
+        columns = {
+            "icon",
+            "mtime",
+            "size",
+        },
         keymaps = {
             ["<C-c>"] = "actions.refresh",
             ["<C-p>"] = require('telescope.builtin').git_files,
