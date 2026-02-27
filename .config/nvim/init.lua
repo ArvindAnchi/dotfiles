@@ -1,9 +1,25 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.globals")
-require("config.options")
-require("config.keymaps")
-require("config.autocmds")
-require("config.filetype")
-require("config.lazy")
+-- Core
+require('config.globals')
+require('config.filetype')
+require('config.options')
+require('config.keymaps')
+require('config.autocmds')
+require('config.commands')
+
+require('plugins.theme')
+require('plugins.mason')
+require('plugins.roslyn')
+require('plugins.harpoon')
+require('plugins.lualine')
+require('plugins.treesitter')
+require('plugins.telescope')
+require('plugins.conform')
+require('plugins.cmp')
+require('plugins.fugitive')
+require('plugins.gitsigns')
+require('plugins.kulala')
+require('plugins.oil')
+require('plugins.supermaven')
+require('plugins.undotree')
 
 -- vim: ts=2 sts=2 sw=2 et

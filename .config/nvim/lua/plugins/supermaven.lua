@@ -1,12 +1,7 @@
-return {
-    {
-        'supermaven-inc/supermaven-nvim',
-        config = function()
-            require('supermaven-nvim').setup {}
-        end,
-        enabled = function()
-            local current_dir = vim.fn.getcwd()
-            return current_dir:find '^/mnt/home/arvindanchi/.pk2' == nil
-        end,
-    },
-}
+vim.pack.add({ 'https://github.com/supermaven-inc/supermaven-nvim' })
+
+local current_dir = vim.fn.getcwd()
+if current_dir:find('.pk2') == nil then
+	local supermaven = require('supermaven-nvim')
+	supermaven.setup({})
+end

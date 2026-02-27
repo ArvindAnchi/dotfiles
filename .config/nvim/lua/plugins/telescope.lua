@@ -1,25 +1,25 @@
-return {
-    'nvim-telescope/telescope.nvim',
-    event = 'VimEnter',
-    branch = 'master',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-        require('telescope').setup({})
+vim.pack.add({ 'https://github.com/nvim-lua/plenary.nvim.git' })
+vim.pack.add({ 'https://github.com/nvim-telescope/telescope-fzf-native.nvim.git' }, {
+	build = 'make',
+	cond = function()
+		return vim.fn.executable('make') == 1
+	end,
+})
+vim.pack.add({ 'https://github.com/nvim-telescope/telescope.nvim.git' })
 
-        pcall(require('telescope').load_extension, 'fzf')
+require('telescope').setup({
+	defaults = {
+		-- Ignoring virtual csharp files for rzls.nvim
+		file_ignore_patterns = { '__virtual%.cs$' },
+	},
+})
 
-        local builtin = require 'telescope.builtin'
+pcall(require('telescope').load_extension, 'fzf')
 
-        vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[S]earch [F]iles' })
-        vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = '[S]earch [F]iles' })
-        vim.keymap.set('n', '<leader>ps', function()
-            builtin.grep_string({ search = vim.fn.input("Grep > ") })
-        end)
-        vim.keymap.set('n', '<leader><leader>', function()
-            builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-                winblend = 10,
-                previewer = false,
-            })
-        end, { desc = '[/] Fuzzily search in current buffer' })
-    end,
-}
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>ps', function()
+	builtin.grep_string({ search = vim.fn.input('Grep > ') })
+end)
