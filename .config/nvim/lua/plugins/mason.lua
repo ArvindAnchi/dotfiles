@@ -17,14 +17,7 @@ require('mason-lspconfig').setup({})
 require('mason-tool-installer').setup({
 	ensure_installed = {
 		'lua_ls',
-		'html-lsp',
-		'roslyn',
-		'netcoredbg',
 		'stylua',
-		'csharpier',
-		'gopls',
-		'goimports',
-		'gofumpt',
 	},
 })
 
