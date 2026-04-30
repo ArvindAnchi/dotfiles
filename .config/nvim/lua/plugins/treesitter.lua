@@ -15,6 +15,7 @@ require('nvim-treesitter').install({
 	'go',
 	'json',
 	'python',
+	'typescript',
 })
 
 vim.api.nvim_create_autocmd({ 'PackChanged' }, {
